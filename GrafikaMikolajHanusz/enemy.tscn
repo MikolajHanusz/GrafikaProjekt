@@ -1,0 +1,93 @@
+[gd_scene load_steps=13 format=3 uid="uid://mei5ews220f1"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_nhfwc"]
+[ext_resource type="Texture2D" uid="uid://gj6odrv6gl0r" path="res://enemy.png" id="1_odnie"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6tgr8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjcex"]
+atlas = ExtResource("1_odnie")
+region = Rect2(0, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6tra"]
+atlas = ExtResource("1_odnie")
+region = Rect2(512, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dckjm"]
+atlas = ExtResource("1_odnie")
+region = Rect2(1024, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fa25"]
+atlas = ExtResource("1_odnie")
+region = Rect2(1536, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43gu2"]
+atlas = ExtResource("1_odnie")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgdhq"]
+atlas = ExtResource("1_odnie")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ww4s"]
+atlas = ExtResource("1_odnie")
+region = Rect2(1024, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypmar"]
+atlas = ExtResource("1_odnie")
+region = Rect2(1536, 0, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8k1nd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjcex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6tra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dckjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fa25")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43gu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgdhq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ww4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypmar")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="enemy" type="CharacterBody3D"]
+transform = Transform3D(0.482164, 0, 0, 0, 0.473074, 0, 0, 0, 0.63754, 0, 0, 0)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_nhfwc")
+move_speed = 6.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_6tgr8")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.52335, 0)
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_8k1nd")
+animation = &"death"
+autoplay = "default"

@@ -1,0 +1,15 @@
+AnimatedSprite3D
+CollisionShape3D
+CharacterBody3D
+Button
+Label
+Panel
+Control
+ColorRect
+AnimatedSprite2D
+CanvasLayer
+Camera3D
+RayCast3D
+DirectionalLight3D
+WorldEnvironment
+MeshInstance3D

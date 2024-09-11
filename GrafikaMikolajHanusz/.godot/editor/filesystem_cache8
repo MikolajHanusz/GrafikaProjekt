@@ -1,0 +1,12 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1726074640
+doom_guy.gd::GDScript::-1::1718710100::0::1::::<>CharacterBody3D<>::
+doom_guy.tscn::PackedScene::193746992427723949::1718711508::0::1::::<><>::uid://b2jbh1l76g8ob::::res://gun.png<>res://doom_guy.gd
+enemy.gd::GDScript::-1::1718710724::0::1::::<>CharacterBody3D<>::
+enemy.png::CompressedTexture2D::441619874332706447::1718708817::1718708910::1::::<><>::
+enemy.tscn::PackedScene::851063189366013040::1718711508::0::1::::<><>::res://enemy.gd<>uid://gj6odrv6gl0r::::res://enemy.png
+export_presets.cfg::TextFile::-1::1718711855::0::1::::<><>::
+gun.png::CompressedTexture2D::4300173463352200897::1718706064::1718706069::1::::<><>::
+icon.svg::CompressedTexture2D::6957016369519844909::1718703782::1718703806::1::::<><>::
+sawed-off-shotgun-sprite-dog-rifle-sprite.jpg::CompressedTexture2D::3901981589875499833::1718708314::1718708318::1::::<><>::
+world.tscn::PackedScene::1667568971141152575::1718711508::0::1::::<><>::uid://c038qjaug7s0::::res://doom_guy.tscn<>uid://mei5ews220f1::::res://enemy.tscn
